@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calculadora Ley 73</title>
+</head>
+<body>
+    <section class="modal">
+        <form class="modal-form" id="modal-form">
+
+            <label class="modal-form__nameValue-label" for="nameValue">Nombre</label>
+            <input class="modal-form__nameValue-input" type="text" name="nameValue" id="nameValue" placeholder="Bruce Wayne" required autofocus>
+
+            <label class="modal-form__birthdayValue-label" for="birthdayValue">Fecha de nacimiento</label>
+            <input class="modal-form__birthdayValue-input" type="date" name="birthdayValue" id="birthdayValue" required>
+
+            <label class="modal-form__spdValue-label" for="spdValue">SPD (últimas 250 semanas)</label>
+            <input class="modal-form__spdValue-input" type="number" name="spdValue" id="spdValue" required>
+
+            <label class="modal-form__semanasCotizadas-label" for="semanasCotizadas">Semanas cotizadas</label>
+            <input class="modal-form__semanasCotizadas-input" type="number" name="semanasCotizadas" id="semanasCotizadas" required>
+
+            <label class="modal-form__desiredAge-label" for="desiredAge">Edad deseada para el retiro</label>
+            <input class="modal-form__desiredAge-input" type="number" name="desiredAge" id="desiredAge" required>
+
+            <button type="reset">Reset</button>
+            <button type="button" id="btnSend">Enviar</button>
+
+        </form>
+    </section>
+    
+    <main class="pension-data">
+        <h1>Calculadora Ley 73</h1>
+
+        <section class="header">
+            <h2>Datos Personales</h2>
+            <p class="header__name">
+                <strong>Nombre del cliente: </strong> 
+                <span class="header__name-value" id="header__name-value"></span>
+            </p>
+            
+            <p class="header__date">
+                <strong>Fecha: </strong> 
+                <span class="header__date-value" id="header__date-value"></span>
+            </p>
+            
+            <p class="header__birthday">
+                <strong>Nacimiento: </strong> 
+                <span class="header__birthday-value" id="header__birthday-value"></span>
+            </p>
+            
+            <p class="header__age">
+                <strong>Edad: </strong> 
+                <span class="header__age-value" id="header__age-value"></span>
+            </p>
+            
+            <p class="header__spd">
+                <strong>SPD (útimas 250 semanas): </strong> 
+                <span class="header__spd-value" id="header__spd-value"></span>
+            </p>
+            
+            <p class="header__semanas_cotizadas">
+                <strong>Semanas cotizadas: </strong> 
+                <span class="header__semanas_cotizadas-value" id="header__semanas_cotizadas-value"></span>
+            </p>
+            
+            <p class="header__semanas_faltantes">
+                <strong>Semanas faltantes para el retiro: </strong> 
+                <span class="header__semanas_faltantes-value" id="header__semanas_faltantes-value"></span>
+            </p>
+            
+            <p class="header__semanas_excedentes">
+                <strong>Semanas excedentes: </strong> 
+                <span class="header__semanas_excedentes-value" id="header__semanas_excedentes-value"></span>
+            </p>
+            
+            <p class="header__desired-age">
+                <strong>Edad deseada para el retiro: </strong> 
+                <span class="header__desired-age-value" id="header__desired-age-value"></span>
+            </p>
+            
+            <p class="header__age-factor">
+                <strong>Factor de edad: </strong> 
+                <span class="header__age-factor-value" id="header__age-factor-value"></span>
+            </p>
+            
+            <p class="header__asigFamAyudAsis">
+                <strong>Asignaciones familiares/Ayuda asistencial: </strong> 
+                <span class="header__asigFamAyudAsis-value" id="header__asigFamAyudAsis-value"></span>
+            </p>
+            
+            <p class="header__factor-cuantia">
+                <strong>Factor cuantía: </strong> 
+                <span class="header__factor-cuantia-value" id="header__factor-cuantia-value"></span>
+            </p>
+            
+            <p class="header__incrementos-adicionales">
+                <strong>Factor incrementos adicionales: </strong> 
+                <span class="header__incrementos-adicionales-value" id="header__incrementos-adicionales-value"></span>
+            </p>
+        </section>
+
+        <section class="cesantia-vejez">
+            <h2>Cesantía y vejez LSS 73</h2>
+                        
+            <p class="cesantia-vejez__cuantia-basica">
+                <strong>Monto cuantía básica: </strong> 
+                <span class="cesantia-vejez__cuantia-basica-value" id="cesantia-vejez__cuantia-basica-value"></span>
+            </p>
+                        
+            <p class="cesantia-vejez__incrementos-anuales">
+                <strong>Incrementos Anuales: </strong> 
+                <span class="cesantia-vejez__incrementos-anuales-value" id="cesantia-vejez__incrementos-anuales-value"></span>
+            </p>
+                        
+            <p class="cesantia-vejez__monto-incrementos-anuales">
+                <strong>Monto de incrementos anuales: </strong> 
+                <span class="cesantia-vejez__monto-incrementos-anuales-value" id="cesantia-vejez__monto-incrementos-anuales-value"></span>
+            </p>
+                        
+            <p class="cesantia-vejez__monto-edad">
+                <strong>Monto de acuerdo a edad: </strong> 
+                <span class="cesantia-vejez__monto-edad-value" id="cesantia-vejez__monto-edad-value"></span>
+            </p>
+                        
+            <p class="cesantia-vejez__monto-maximo">
+                <strong>Monto máximo: </strong> 
+                <span class="cesantia-vejez__monto-maximo-value" id="cesantia-vejez__monto-maximo-value"></span>
+            </p>
+                        
+            <p class="cesantia-vejez__asigFamAyudAsis">
+                <strong>Asignaciones Familiares/Ayuda Asistencial: </strong> 
+                <span class="cesantia-vejez__asigFamAyudAsis-value" id="cesantia-vejez__asigFamAyudAsis-value"></span>
+            </p>
+                        
+            <p class="cesantia-vejez__pension-mensual">
+                <strong>Pensión mensual: </strong> 
+                <span class="cesantia-vejez__pension-mensual-value" id="cesantia-vejez__pension-mensual-value"></span>
+            </p>
+
+        </section>
+    </main>
+
+
+    <script type="module" src="./js/script.js"></script>
+</body>
+</html>
