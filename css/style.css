@@ -99,3 +99,117 @@ h2 {
     margin: 8px 0;
     
 }
+#btnPdfPrint {
+    cursor: pointer;
+}
+.pdf-container{
+    width: 70ch;
+    margin: 0 auto;
+    display: none;
+}
+.pdf-container h2 {
+    margin-bottom: 2rem;
+}
+.pdf-container .header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.5rem;
+    grid-template-areas: 
+    "nombre nombre nombre"
+    "nombreval nombreval nombreval"
+    "fecha nacimiento edad"
+    "fechaval nacimientoval edadval"
+    "spd semcotizadas semfaltantes"
+    "spdval semcotizadasval semfaltantesval"
+    "semexcedentes edadeseada factoredad"
+    "semexcedentesval edadeseadaval factoredadval"
+    "asignfam factorincrementos factorcuantia"
+    "asignfamval factorincrementosval factorcuantiaval";
+
+}
+.pdf-container .header__name {
+    grid-area: nombre;
+}
+.pdf-container .header__name-value {
+    grid-area: nombreval;
+}
+.pdf-container .header__date {
+    grid-area: fecha;
+}
+.pdf-container .header__date-value {
+    grid-area: fechaval;
+}
+.pdf-container .header__birthday{
+    grid-area: nacimiento;
+}
+.pdf-container .header__birthday-value{
+    grid-area: nacimientoval;
+}
+.pdf-container .header__age{
+    grid-area: edad;
+}
+.pdf-container .header__age-value{
+    grid-area: edadval;
+}
+.pdf-container .header__spd{
+    grid-area: spd;
+}
+.pdf-container .header__spd-value{
+    grid-area: spdval;
+}
+.pdf-container .header__semanas_cotizadas{
+    grid-area: semcotizadas;
+}
+.pdf-container .header__semanas_cotizadas-value{
+    grid-area: semcotizadasval;
+}
+.pdf-container .header__semanas_faltantes{
+    grid-area: semfaltantes;
+}
+.pdf-container .header__semanas_faltantes-value{
+    grid-area: semfaltantesval;
+}
+.pdf-container .header__semanas_excedentes{
+    grid-area: semexcedentes;
+}
+.pdf-container .header__semanas_excedentes-value{
+    grid-area: semexcedentesval;
+}
+.pdf-container .header__desired-age{
+    grid-area: edadeseada;
+}
+.pdf-container .header__desired-age-value{
+    grid-area: edadeseadaval;
+}
+.pdf-container .header__age-factor{
+    grid-area: factoredad;
+}
+.pdf-container .header__age-factor-value{
+    grid-area: factoredadval;
+}
+.pdf-container .header__asigFamAyudAsis{
+    grid-area: asignfam;
+}
+.pdf-container .header__asigFamAyudAsis-value{
+    grid-area: asignfamval;
+}
+.pdf-container .header__factor-cuantia{
+    grid-area: factorcuantia;
+}
+.pdf-container .header__factor-cuantia-value{
+    grid-area: factorcuantiaval;
+}
+.pdf-container .header__incrementos-adicionales{
+    grid-area: factorincrementos;
+}
+.pdf-container .header__incrementos-adicionales-value{
+    grid-area: factorincrementosval;
+}
+.pdf-container .cesantia-vejez {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.pdf-container .cesantia-vejez p{
+    display: flex;
+    align-items: center;
+}

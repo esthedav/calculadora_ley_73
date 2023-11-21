@@ -46,6 +46,31 @@ const cesantiaVejezMontoMaximoValue = document.getElementById('cesantia-vejez__m
 const cesantiaVejezAsigFamAyudAsisValue = document.getElementById('cesantia-vejez__asigFamAyudAsis-value')
 const cesantiaVejezPensionMensualValue = document.getElementById('cesantia-vejez__pension-mensual-value')
 
+// Get PDF elements Datos personales
+const pdfNameValue = document.getElementById('pdf__name-value')
+const pdfDateValue = document.getElementById('pdf__date-value')
+const pdfBirthdayValue = document.getElementById('pdf__birthday-value')
+const pdfAgeValue = document.getElementById('pdf__age-value')
+const pdfSPDValue = document.getElementById('pdf__spd-value')
+const pdfSemanasCotizadasValue = document.getElementById('pdf__semanas_cotizadas-value')
+const pdfSemanasFaltantesValue = document.getElementById('pdf__semanas_faltantes-value')
+const pdfSemanasExcedentesValue = document.getElementById('pdf__semanas_excedentes-value')
+const pdfDesiredAgeValue = document.getElementById('pdf__desired-age-value')
+const pdfAgeFactorValue = document.getElementById('pdf__age-factor-value')
+const pdfAsigFamAyudAsisValue = document.getElementById('pdf__asigFamAyudAsis-value')
+const pdfFactorCuantia = document.getElementById('pdf__factor-cuantia-value')
+const pdfIncrementosAdicionalesValue = document.getElementById('pdf__incrementos-adicionales-value')
+
+
+// Get PDF elements Cesantia y Vejez LSS
+const pdfVejezCuantiaBasicaValue = document.getElementById('pdf-vejez__cuantia-basica-value')
+const pdfVejezIncrementosAnualesValue = document.getElementById('pdf-vejez__incrementos-anuales-value')
+const pdfVejezMontoIncrementosAnualesValue = document.getElementById('pdf-vejez__monto-incrementos-anuales-value')
+const pdfVejezMontoEdadValue = document.getElementById('pdf-vejez__monto-edad-value')
+const pdfVejezMontoMaximoValue = document.getElementById('pdf-vejez__monto-maximo-value')
+const pdfVejezAsigFamAyudAsisValue = document.getElementById('pdf-vejez__asigFamAyudAsis-value')
+const pdfVejezPensionMensualValue = document.getElementById('pdf-vejez__pension-mensual-value')
+
 
 
 btnSend.addEventListener("click", () => {
@@ -98,9 +123,29 @@ btnSend.addEventListener("click", () => {
     cesantiaVejezMontoMaximoValue.textContent = montoMaximo.toLocaleString('es-MX')
     cesantiaVejezAsigFamAyudAsisValue.textContent = montoAsigFamAyudAsis.toLocaleString('es-MX')
     cesantiaVejezPensionMensualValue.textContent = pensionMensual.toLocaleString('es-MX')
+
+    // Add Text to PDF
+    pdfNameValue.textContent = nameValue
+    pdfDateValue.textContent = getCurrentDate()
+    pdfBirthdayValue.textContent = formatDate(birthdayValue)
+    pdfAgeValue.textContent = currentAge
+    pdfSPDValue.textContent = spdValue.toLocaleString('es-MX')
+    pdfSemanasCotizadasValue.textContent = semanasCotizadas.toLocaleString('es-MX')
+    pdfSemanasFaltantesValue.textContent = semanasFaltantes.toLocaleString('es-MX')
+    pdfSemanasExcedentesValue.textContent = semanasExcedentes.toLocaleString('es-MX')
+    pdfDesiredAgeValue.textContent = desiredAge
+    pdfAgeFactorValue.textContent = ageFactorValue
+    pdfAsigFamAyudAsisValue.textContent = asigFamAyudAsis
+    pdfFactorCuantia.textContent = factorCuantia
+    pdfIncrementosAdicionalesValue.textContent = incrementosAdicionales
+
+    // Add text to PDF Cesantía y vejez LSS 73
+    pdfVejezCuantiaBasicaValue.textContent = montoCuantiaBasica.toLocaleString('es-MX')
+    pdfVejezIncrementosAnualesValue.textContent = incrementosAnuales
+    pdfVejezMontoIncrementosAnualesValue.textContent = montoIncrementosAnuales.toLocaleString('es-MX')
+    pdfVejezMontoEdadValue.textContent = montoByAge.toLocaleString('es-MX')
+    pdfVejezMontoMaximoValue.textContent = montoMaximo.toLocaleString('es-MX')
+    pdfVejezAsigFamAyudAsisValue.textContent = montoAsigFamAyudAsis.toLocaleString('es-MX')
+    pdfVejezPensionMensualValue.textContent = pensionMensual.toLocaleString('es-MX')
+
 })
-
-
-
-
-
