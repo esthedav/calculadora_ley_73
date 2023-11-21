@@ -1,20 +1,96 @@
+:root {
+    --primary-100:#d4eaf7;
+    --primary-200:#b6ccd8;
+    --primary-300:#3b3c3d;
+    --accent-100:#71c4ef;
+    --accent-200:#00668c;
+    --text-100:#1d1c1c;
+    --text-200:#313d44;
+    --bg-100:#fffefb;
+    --bg-200:#f5f4f1;
+    --bg-300:#cccbc8;
+}
 * {
     margin: 0;
     box-sizing: border-box;
     padding: 0;
 }
+* 
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.modal {
+    padding: 10% 15%;
+    background: var(--bg-200);
+}
+h1 {
+    color: var(--accent-200);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    filter: drop-shadow(4px 4px 8px var(--primary-300));
+}
+
 .modal-form {
-    width: 70ch;
     margin: 32px auto 0;
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
-.pension-data{
-    border-top: solid 4px black;
-    width: 70ch;
-    margin: 32px auto 0;
+
+.btn-container {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.btn--borrar {
+    background: var(--primary-100);
+    cursor: pointer;
+}
+.btn--borrar:hover {
+    transition: 0.5s ease-in-out;
+    color: #fff;
+}
+.btn--enviar {
+    background: var(--accent-200);
+    color: #fff;
+    cursor: pointer;
+}
+.btn--enviar:hover {
+    transition: 0.5s ease-in-out;
+    background: var(--primary-300);
+}
+.header {
+    margin-bottom: 32px;
+}
+.pension-data {
+    padding: 10% 15%;
+    background: var(--bg-100);
+}
+.pension-data h2 {
+    margin-bottom: 2rem;
+}
+.paraph-value {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    height: 50px;
+    background: var(--primary-100);
+    border-radius: 6px;
+    color: var(--primary-300);
+    margin: 8px 0;
+    
 }

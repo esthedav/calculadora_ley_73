@@ -8,6 +8,8 @@
 </head>
 <body>
     <section class="modal">
+        <h1>Calculadora Ley 73</h1>
+        <h2>Ingresar datos</h2>
         <form class="modal-form" id="modal-form">
 
             <label class="modal-form__nameValue-label" for="nameValue">Nombre</label>
@@ -25,120 +27,82 @@
             <label class="modal-form__desiredAge-label" for="desiredAge">Edad deseada para el retiro</label>
             <input class="modal-form__desiredAge-input" type="number" name="desiredAge" id="desiredAge" required>
 
-            <button type="reset">Reset</button>
-            <button type="button" id="btnSend">Enviar</button>
+            <div class="btn-container">
+                <button class="btn btn--borrar" type="reset">Borrar</button>
+                <button class="btn btn--enviar" type="button" id="btnSend">Enviar</button>
+            </div>
 
         </form>
     </section>
     
     <main class="pension-data">
-        <h1>Calculadora Ley 73</h1>
-
         <section class="header">
             <h2>Datos Personales</h2>
-            <p class="header__name">
-                <strong>Nombre del cliente: </strong> 
-                <span class="header__name-value" id="header__name-value"></span>
-            </p>
+
+            <p class="header__name">Nombre:</p>
+            <p class="header__name-value paraph-value" id="header__name-value"></p>
+
+            <p class="header__date">Fecha:</p>
+            <p class="header__date-value paraph-value" id="header__date-value"></p>
+
+            <p class="header__birthday">Nacimiento:</p>
+            <p class="header__birthday-value paraph-value" id="header__birthday-value"></p>
             
-            <p class="header__date">
-                <strong>Fecha: </strong> 
-                <span class="header__date-value" id="header__date-value"></span>
-            </p>
+            <p class="header__age">Edad:</p>
+            <p class="header__age-value paraph-value" id="header__age-value"></p>
             
-            <p class="header__birthday">
-                <strong>Nacimiento: </strong> 
-                <span class="header__birthday-value" id="header__birthday-value"></span>
-            </p>
+            <p class="header__spd">SPD:</p>
+            <p class="header__spd-value paraph-value" id="header__spd-value"></p>
             
-            <p class="header__age">
-                <strong>Edad: </strong> 
-                <span class="header__age-value" id="header__age-value"></span>
-            </p>
+            <p class="header__semanas_cotizadas">Semanas cotizadas:</p>
+            <p class="header__semanas_cotizadas-value paraph-value" id="header__semanas_cotizadas-value"></p>
             
-            <p class="header__spd">
-                <strong>SPD (útimas 250 semanas): </strong> 
-                <span class="header__spd-value" id="header__spd-value"></span>
-            </p>
+            <p class="header__semanas_faltantes">Semanas faltantes para el retiro:</p>
+            <p class="header__semanas_faltantes-value paraph-value" id="header__semanas_faltantes-value"></p>
             
-            <p class="header__semanas_cotizadas">
-                <strong>Semanas cotizadas: </strong> 
-                <span class="header__semanas_cotizadas-value" id="header__semanas_cotizadas-value"></span>
-            </p>
+            <p class="header__semanas_excedentes">Semanas excedentes:</p>
+            <p class="header__semanas_excedentes-value paraph-value" id="header__semanas_excedentes-value"></p>
             
-            <p class="header__semanas_faltantes">
-                <strong>Semanas faltantes para el retiro: </strong> 
-                <span class="header__semanas_faltantes-value" id="header__semanas_faltantes-value"></span>
-            </p>
+            <p class="header__desired-age">Edad deseada para el retiro:</p>
+            <p class="header__desired-age-value paraph-value" id="header__desired-age-value"></p>
+
+            <p class="header__age-factor">Factor de edad:</p>
+            <p class="header__age-factor-value paraph-value" id="header__age-factor-value"></p>
             
-            <p class="header__semanas_excedentes">
-                <strong>Semanas excedentes: </strong> 
-                <span class="header__semanas_excedentes-value" id="header__semanas_excedentes-value"></span>
-            </p>
+            <p class="header__asigFamAyudAsis">Asignaciones familiares/Ayuda asistencial:</p>
+            <p class="header__asigFamAyudAsis-value paraph-value" id="header__asigFamAyudAsis-value"></p>
             
-            <p class="header__desired-age">
-                <strong>Edad deseada para el retiro: </strong> 
-                <span class="header__desired-age-value" id="header__desired-age-value"></span>
-            </p>
+            <p class="header__factor-cuantia">Factor cuantía:</p>
+            <p class="header__factor-cuantia-value paraph-value" id="header__factor-cuantia-value"></p>
             
-            <p class="header__age-factor">
-                <strong>Factor de edad: </strong> 
-                <span class="header__age-factor-value" id="header__age-factor-value"></span>
-            </p>
-            
-            <p class="header__asigFamAyudAsis">
-                <strong>Asignaciones familiares/Ayuda asistencial: </strong> 
-                <span class="header__asigFamAyudAsis-value" id="header__asigFamAyudAsis-value"></span>
-            </p>
-            
-            <p class="header__factor-cuantia">
-                <strong>Factor cuantía: </strong> 
-                <span class="header__factor-cuantia-value" id="header__factor-cuantia-value"></span>
-            </p>
-            
-            <p class="header__incrementos-adicionales">
-                <strong>Factor incrementos adicionales: </strong> 
-                <span class="header__incrementos-adicionales-value" id="header__incrementos-adicionales-value"></span>
-            </p>
+            <p class="header__incrementos-adicionales">Factor incrementos adicionales:</p>
+            <p class="header__incrementos-adicionales-value paraph-value" id="header__incrementos-adicionales-value"></p>
+
         </section>
 
         <section class="cesantia-vejez">
-            <h2>Cesantía y vejez LSS 73</h2>
-                        
-            <p class="cesantia-vejez__cuantia-basica">
-                <strong>Monto cuantía básica: </strong> 
-                <span class="cesantia-vejez__cuantia-basica-value" id="cesantia-vejez__cuantia-basica-value"></span>
-            </p>
-                        
-            <p class="cesantia-vejez__incrementos-anuales">
-                <strong>Incrementos Anuales: </strong> 
-                <span class="cesantia-vejez__incrementos-anuales-value" id="cesantia-vejez__incrementos-anuales-value"></span>
-            </p>
-                        
-            <p class="cesantia-vejez__monto-incrementos-anuales">
-                <strong>Monto de incrementos anuales: </strong> 
-                <span class="cesantia-vejez__monto-incrementos-anuales-value" id="cesantia-vejez__monto-incrementos-anuales-value"></span>
-            </p>
-                        
-            <p class="cesantia-vejez__monto-edad">
-                <strong>Monto de acuerdo a edad: </strong> 
-                <span class="cesantia-vejez__monto-edad-value" id="cesantia-vejez__monto-edad-value"></span>
-            </p>
-                        
-            <p class="cesantia-vejez__monto-maximo">
-                <strong>Monto máximo: </strong> 
-                <span class="cesantia-vejez__monto-maximo-value" id="cesantia-vejez__monto-maximo-value"></span>
-            </p>
-                        
-            <p class="cesantia-vejez__asigFamAyudAsis">
-                <strong>Asignaciones Familiares/Ayuda Asistencial: </strong> 
-                <span class="cesantia-vejez__asigFamAyudAsis-value" id="cesantia-vejez__asigFamAyudAsis-value"></span>
-            </p>
-                        
-            <p class="cesantia-vejez__pension-mensual">
-                <strong>Pensión mensual: </strong> 
-                <span class="cesantia-vejez__pension-mensual-value" id="cesantia-vejez__pension-mensual-value"></span>
-            </p>
+            <h2>Pensión</h2>
+
+            <p class="cesantia-vejez__cuantia-basica">Monto cuantía básica:</p>
+            <p class="cesantia-vejez__cuantia-basica-value paraph-value" id="cesantia-vejez__cuantia-basica-value"></p>
+
+            <p class="cesantia-vejez__incrementos-anuales">Incrementos Anuales:</p>
+            <p class="cesantia-vejez__incrementos-anuales-value paraph-value" id="cesantia-vejez__incrementos-anuales-value"></p>
+
+            <p class="cesantia-vejez__monto-incrementos-anuales">Monto de incrementos anuales:</p>
+            <p class="cesantia-vejez__monto-incrementos-anuales-value paraph-value" id="cesantia-vejez__monto-incrementos-anuales-value"></p>
+
+            <p class="cesantia-vejez__monto-edad">Monto de acuerdo a edad:</p>
+            <p class="cesantia-vejez__monto-edad-value paraph-value" id="cesantia-vejez__monto-edad-value"></p>
+
+            <p class="cesantia-vejez__monto-maximo">Monto máximo:</p>
+            <p class="cesantia-vejez__monto-maximo-value paraph-value" id="cesantia-vejez__monto-maximo-value"></p>
+
+            <p class="cesantia-vejez__asigFamAyudAsis">Asignaciones Familiares/Ayuda Asistencial:</p>
+            <p class="cesantia-vejez__asigFamAyudAsis-value paraph-value" id="cesantia-vejez__asigFamAyudAsis-value"></p>
+
+            <p class="cesantia-vejez__pension-mensual">Pensión mensual:</p>
+            <p class="cesantia-vejez__pension-mensual-value paraph-value" id="cesantia-vejez__pension-mensual-value"></p>
 
         </section>
     </main>

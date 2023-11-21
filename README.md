@@ -9,4 +9,3 @@ Toma los datos:
 - Edad deseada
 
 **y genera un calculo de pensión**
-git add .
