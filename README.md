@@ -9,3 +9,7 @@ Toma los datos:
 - Edad deseada
 
 **y genera un calculo de pensión**
+
+## Salario Minino
+
+Se encuentra en el archivo `cuantiaBasica` última actualización al 2024

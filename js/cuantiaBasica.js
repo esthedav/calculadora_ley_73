@@ -1,4 +1,4 @@
-function cuantiaBasica(spd, minSalary=207.44){
+function cuantiaBasica(spd, minSalary=248.93){
     let factorCuantia = 80.00
     let incrementosAdicionales = 0.563
     const toFactorCuantia = (cuantiaBasica) => Number((cuantiaBasica / 100).toFixed(4))
