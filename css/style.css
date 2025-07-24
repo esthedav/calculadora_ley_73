@@ -1,120 +1,121 @@
 :root {
-    --primary-100:#d4eaf7;
-    --primary-200:#b6ccd8;
-    --primary-300:#3b3c3d;
-    --accent-100:#71c4ef;
-    --accent-200:#00668c;
-    --text-100:#1d1c1c;
-    --text-200:#313d44;
-    --bg-100:#fffefb;
-    --bg-200:#f5f4f1;
-    --bg-300:#cccbc8;
+  --primary-100: #d4eaf7;
+  --primary-200: #b6ccd8;
+  --primary-300: #3b3c3d;
+  --accent-100: #71c4ef;
+  --accent-200: #00668c;
+  --text-100: #1d1c1c;
+  --text-200: #313d44;
+  --bg-100: #fffefb;
+  --bg-200: #f5f4f1;
+  --bg-300: #cccbc8;
 }
 * {
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
 }
-* 
-::after,
+* ::after,
 ::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
 }
 .modal {
-    padding: 10% 15%;
-    background: var(--bg-200);
+  padding: 10% 15%;
+  background: var(--bg-200);
 }
 .modal input {
-    border: none;
-    height: 2rem;
-    outline-color: var(--accent-200);
+  border: none;
+  height: 2rem;
+  outline-color: var(--accent-200);
 }
 h1 {
-    color: var(--accent-200);
-    margin-bottom: 1rem;
-}
-
-h2 {
-    filter: drop-shadow(4px 4px 8px var(--primary-300));
+  color: var(--accent-200);
+  margin-bottom: 1rem;
 }
 
 .modal-form {
-    margin: 32px auto 0;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  margin: 32px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .btn-container {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .btn {
-    padding: 12px;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
 }
 .btn--borrar {
-    background: var(--primary-100);
-    cursor: pointer;
+  background: var(--primary-100);
+  cursor: pointer;
 }
 .btn--borrar:hover {
-    transition: 0.5s ease-in-out;
-    color: #fff;
+  transition: 0.5s ease-in-out;
+  color: #fff;
 }
 .btn--enviar {
-    background: var(--accent-200);
-    color: #fff;
-    cursor: pointer;
+  background: var(--accent-200);
+  color: #fff;
+  cursor: pointer;
 }
 .btn--enviar:hover {
-    transition: 0.5s ease-in-out;
-    background: var(--primary-300);
+  transition: 0.5s ease-in-out;
+  background: var(--primary-300);
 }
 .header {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 .pension-data {
-    padding: 10% 15%;
-    background: var(--bg-100);
+  padding: 10% 15%;
+  background: var(--bg-100);
 }
 .pension-data h2 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 .paraph-value {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 0.5rem;
-    min-height: 50px;
-    background: var(--primary-100);
-    border-radius: 6px;
-    color: var(--primary-300);
-    margin: 8px 0;
-    
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  min-height: 50px;
+  background: var(--primary-100);
+  border-radius: 6px;
+  color: var(--primary-300);
+  margin: 8px 0;
 }
 #btnPdfPrint {
-    cursor: pointer;
+  cursor: pointer;
 }
-.pdf-container{
-    width: 70ch;
-    margin: 0 auto;
-    display: none;
+.pdf-container {
+  width: 70ch;
+  height: 27.9cm;
+  margin: 0 auto;
+  display: none;
+  overflow: wrap;
 }
 .pdf-container h2 {
-    margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.pdf-container .header {
+  margin-bottom: 1rem;
 }
 .pdf-container .header {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1.5rem;
-    grid-template-areas: 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.5rem;
+  grid-template-areas:
     "nombre nombre nombre"
     "nombreval nombreval nombreval"
     "fecha nacimiento edad"
@@ -125,91 +126,102 @@ h2 {
     "semexcedentesval edadeseadaval factoredadval"
     "asignfam factorincrementos factorcuantia"
     "asignfamval factorincrementosval factorcuantiaval";
-
 }
 .pdf-container .header__name {
-    grid-area: nombre;
+  grid-area: nombre;
 }
 .pdf-container .header__name-value {
-    grid-area: nombreval;
+  grid-area: nombreval;
 }
 .pdf-container .header__date {
-    grid-area: fecha;
+  grid-area: fecha;
 }
 .pdf-container .header__date-value {
-    grid-area: fechaval;
+  grid-area: fechaval;
 }
-.pdf-container .header__birthday{
-    grid-area: nacimiento;
+.pdf-container .header__birthday {
+  grid-area: nacimiento;
 }
-.pdf-container .header__birthday-value{
-    grid-area: nacimientoval;
+.pdf-container .header__birthday-value {
+  grid-area: nacimientoval;
 }
-.pdf-container .header__age{
-    grid-area: edad;
+.pdf-container .header__age {
+  grid-area: edad;
 }
-.pdf-container .header__age-value{
-    grid-area: edadval;
+.pdf-container .header__age-value {
+  grid-area: edadval;
 }
-.pdf-container .header__spd{
-    grid-area: spd;
+.pdf-container .header__spd {
+  grid-area: spd;
 }
-.pdf-container .header__spd-value{
-    grid-area: spdval;
+.pdf-container .header__spd-value {
+  grid-area: spdval;
 }
-.pdf-container .header__semanas_cotizadas{
-    grid-area: semcotizadas;
+.pdf-container .header__semanas_cotizadas {
+  grid-area: semcotizadas;
 }
-.pdf-container .header__semanas_cotizadas-value{
-    grid-area: semcotizadasval;
+.pdf-container .header__semanas_cotizadas-value {
+  grid-area: semcotizadasval;
 }
-.pdf-container .header__semanas_faltantes{
-    grid-area: semfaltantes;
+.pdf-container .header__semanas_faltantes {
+  grid-area: semfaltantes;
 }
-.pdf-container .header__semanas_faltantes-value{
-    grid-area: semfaltantesval;
+.pdf-container .header__semanas_faltantes-value {
+  grid-area: semfaltantesval;
 }
-.pdf-container .header__semanas_excedentes{
-    grid-area: semexcedentes;
+.pdf-container .header__semanas_excedentes {
+  grid-area: semexcedentes;
 }
-.pdf-container .header__semanas_excedentes-value{
-    grid-area: semexcedentesval;
+.pdf-container .header__semanas_excedentes-value {
+  grid-area: semexcedentesval;
 }
-.pdf-container .header__desired-age{
-    grid-area: edadeseada;
+.pdf-container .header__desired-age {
+  grid-area: edadeseada;
 }
-.pdf-container .header__desired-age-value{
-    grid-area: edadeseadaval;
+.pdf-container .header__desired-age-value {
+  grid-area: edadeseadaval;
 }
-.pdf-container .header__age-factor{
-    grid-area: factoredad;
+.pdf-container .header__age-factor {
+  grid-area: factoredad;
 }
-.pdf-container .header__age-factor-value{
-    grid-area: factoredadval;
+.pdf-container .header__age-factor-value {
+  grid-area: factoredadval;
 }
-.pdf-container .header__asigFamAyudAsis{
-    grid-area: asignfam;
+.pdf-container .header__asigFamAyudAsis {
+  grid-area: asignfam;
 }
-.pdf-container .header__asigFamAyudAsis-value{
-    grid-area: asignfamval;
+.pdf-container .header__asigFamAyudAsis-value {
+  grid-area: asignfamval;
 }
-.pdf-container .header__factor-cuantia{
-    grid-area: factorcuantia;
+.pdf-container .header__factor-cuantia {
+  grid-area: factorcuantia;
 }
-.pdf-container .header__factor-cuantia-value{
-    grid-area: factorcuantiaval;
+.pdf-container .header__factor-cuantia-value {
+  grid-area: factorcuantiaval;
 }
-.pdf-container .header__incrementos-adicionales{
-    grid-area: factorincrementos;
+.pdf-container .header__incrementos-adicionales {
+  grid-area: factorincrementos;
 }
-.pdf-container .header__incrementos-adicionales-value{
-    grid-area: factorincrementosval;
+.pdf-container .header__incrementos-adicionales-value {
+  grid-area: factorincrementosval;
 }
 .pdf-container .cesantia-vejez {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
 }
-.pdf-container .cesantia-vejez p{
-    display: flex;
-    align-items: center;
+.pdf-container .cesantia-vejez p {
+  display: flex;
+  align-items: center;
+}
+.pdf-container .incrementos__anuales {
+  display: flex;
+  flex-direction: column;
+}
+.pdf-container .cesantia-vejez__pension-mensual {
+  padding-block: 1.5rem;
+}
+.pdf-container .paraph-value-pension {
+  background: rgb(95, 145, 93);
+  color: rgb(250, 250, 250);
 }
